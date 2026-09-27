@@ -3,47 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfólio — Engenharia &amp; Execução</title>
-<meta name="description" content="Portfólio pessoal — da engenharia à execução, com energia e visão de futuro.">
+<title>FL.01 — Da engenharia à execução</title>
+<meta name="description" content="Portfólio de engenharia — do projeto técnico à execução em campo.">
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<!-- Scroll progress indicator -->
-<div class="scroll-progress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cross" viewBox="0 0 24 24"><path d="M12 2v8M12 14v8M2 12h8M14 12h8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M9 5h10v10"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.4 4.4l1.7 1.7M17.9 17.9l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.4 19.6l1.7-1.7M17.9 6.1l1.7-1.7"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 14.6A8.7 8.7 0 1 1 9.4 3.5a7 7 0 0 0 11.1 11.1Z"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+</svg>
+
+<div class="ruler" id="ruler" aria-hidden="true"><span id="rulerFill"></span></div>
 
 <!-- ============ HEADER ============ -->
 <header class="site-header" id="siteHeader">
-  <div class="container header-inner">
-    <a href="#top" class="logo" aria-label="Início">
-      <span class="logo-mark" aria-hidden="true"></span>
-      <span class="logo-text" data-i18n="brandName">Portfólio</span>
+  <div class="row header-inner">
+    <a href="#top" class="mark" aria-label="Início">
+      <svg class="mark-cross" viewBox="0 0 24 24"><use href="#i-cross"/></svg>
+      <span class="mark-text">FL.01</span>
     </a>
 
     <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
-      <a href="#sobre" data-i18n="navAbout">Sobre</a>
-      <a href="#projetos" data-i18n="navProjects">Projetos</a>
-      <a href="#contato" data-i18n="navContact">Contato</a>
+      <a href="#sobre"><span data-i18n="navAbout">Sobre</span></a>
+      <a href="#projetos"><span data-i18n="navProjects">Projetos</span></a>
+      <a href="#contato"><span data-i18n="navContact">Contato</span></a>
     </nav>
 
     <div class="header-controls">
-      <button class="lang-toggle" id="langToggle" type="button" aria-label="Alternar idioma">
-        <span class="lang-opt" data-lang-opt="pt">PT</span>
-        <span class="lang-sep">/</span>
-        <span class="lang-opt" data-lang-opt="en">EN</span>
+      <button class="ctl ctl-lang" id="langToggle" type="button" aria-label="Alternar idioma">
+        <span data-lang-opt="pt">PT</span><span class="ctl-sep">/</span><span data-lang-opt="en">EN</span>
       </button>
-
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema claro/escuro">
-        <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.4 4.4l1.7 1.7M17.9 17.9l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.4 19.6l1.7-1.7M17.9 6.1l1.7-1.7"/></svg>
-        <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 14.6A8.7 8.7 0 1 1 9.4 3.5a7 7 0 0 0 11.1 11.1Z"/></svg>
+      <button class="ctl ctl-icon" id="themeToggle" type="button" aria-label="Alternar tema claro/escuro">
+        <svg class="i i-sun"><use href="#i-sun"/></svg>
+        <svg class="i i-moon"><use href="#i-moon"/></svg>
       </button>
-
-      <button class="nav-burger" id="navBurger" type="button" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
+      <button class="ctl ctl-icon nav-burger" id="navBurger" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span>
       </button>
     </div>
   </div>
@@ -53,65 +56,61 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="hero">
-    <div class="container hero-grid">
+    <div class="row hero-grid">
 
-      <div class="hero-copy reveal" data-delay="0">
-        <p class="eyebrow" data-i18n-html="heroEyebrow">Da engenharia à <strong>execução.</strong></p>
-      </div>
-
-      <div class="hero-visual reveal" data-delay="80">
-        <svg class="hero-bracket" viewBox="0 0 460 160" preserveAspectRatio="none" aria-hidden="true">
-          <path id="bracketPath" d="M20,160 L20,46 C20,22 38,4 62,4 L398,4 C420,4 438,22 438,44 L438,160" />
-        </svg>
-
-        <figure class="portrait-frame">
-          <img src="assets/img/portrait-hero.jpg" alt="Retrato profissional em estúdio, vestindo terno azul-marinho" loading="eager">
-        </figure>
-
-        <div class="floating-chip chip-top reveal" data-delay="260">
-          <span class="chip-dot"></span>
-          <span data-i18n="chipAvailable">Disponível para novos projetos</span>
-        </div>
-      </div>
-
-      <div class="hero-headline reveal" data-delay="140">
-        <h1 data-i18n-html="heroHeadline">Energia com visão<br><strong>de futuro.</strong></h1>
-        <p class="hero-sub" data-i18n="heroSub">Engenharia com raciocínio de execução: planejo, construo e entrego sistemas e processos que funcionam no mundo real — não só no papel.</p>
+      <div class="hero-text">
+        <h1 class="hero-head">
+          <span class="line" data-i18n="heroLine1">Da engenharia à execução.</span>
+          <span class="line line-strong" data-i18n="heroLine2">Energia com visão de futuro.</span>
+        </h1>
+        <p class="hero-sub" data-i18n="heroSub">Planejo, construo e entrego sistemas e processos que funcionam em campo — não só no papel.</p>
         <div class="hero-actions">
-          <a href="#projetos" class="btn btn-primary" data-i18n="heroCtaProjects">Ver projetos</a>
-          <a href="#contato" class="btn btn-ghost" data-i18n="heroCtaContact">Fale comigo</a>
+          <a href="#projetos" class="btn btn-fill" data-i18n="heroCtaProjects">Ver projetos</a>
+          <a href="#contato" class="btn btn-line" data-i18n="heroCtaContact">Fale comigo</a>
         </div>
       </div>
+
+      <figure class="plate" id="heroPlate">
+        <svg class="plate-cross plate-cross--tl" viewBox="0 0 24 24"><use href="#i-cross"/></svg>
+        <svg class="plate-cross plate-cross--tr" viewBox="0 0 24 24"><use href="#i-cross"/></svg>
+        <svg class="plate-cross plate-cross--bl" viewBox="0 0 24 24"><use href="#i-cross"/></svg>
+        <svg class="plate-cross plate-cross--br" viewBox="0 0 24 24"><use href="#i-cross"/></svg>
+
+        <div class="plate-frame">
+          <img src="assets/img/portrait-hero.jpg" alt="Retrato profissional em estúdio, vestindo terno azul-marinho" loading="eager">
+        </div>
+
+        <svg class="dim-line" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true">
+          <path id="dimPath" d="M0,4 V8 M0,8 H100 M100,4 V8" />
+        </svg>
+        <div class="plate-caption">
+          <span data-i18n="plateStatus">disponível para novos projetos</span>
+        </div>
+      </figure>
 
     </div>
-
-    <a href="#sobre" class="scroll-cue" aria-label="Rolar para baixo">
-      <span class="scroll-cue-line"></span>
-      <span data-i18n="scrollDown">role para explorar</span>
-    </a>
   </section>
 
   <!-- ============ ABOUT ============ -->
   <section class="about" id="sobre">
-    <div class="container about-grid">
+    <div class="row about-grid">
 
-      <div class="about-visual reveal">
-        <figure class="portrait-frame portrait-frame--about">
-          <img src="assets/img/portrait-about.jpg" alt="Retrato em close, sorriso confiante" loading="lazy">
+      <div class="about-portrait">
+        <figure class="plate plate--sm">
+          <svg class="plate-cross plate-cross--tl" viewBox="0 0 24 24"><use href="#i-cross"/></svg>
+          <svg class="plate-cross plate-cross--br" viewBox="0 0 24 24"><use href="#i-cross"/></svg>
+          <div class="plate-frame">
+            <img src="assets/img/portrait-about.jpg" alt="Retrato em close, sorriso confiante" loading="lazy">
+          </div>
         </figure>
-        <div class="about-stat reveal" data-delay="120">
-          <span class="stat-num" data-count="8">0</span><span class="stat-plus">+</span>
-          <span class="stat-label" data-i18n="statYears">anos de experiência</span>
-        </div>
       </div>
 
       <div class="about-copy">
-        <p class="section-kicker reveal" data-i18n="aboutKicker">Sobre mim</p>
-        <h2 class="reveal" data-delay="60" data-i18n="aboutTitle">Engenharia é decisão. Execução é disciplina.</h2>
-        <p class="about-lede reveal" data-delay="100" data-i18n="aboutLede">Sou engenheira e atuo na ponte entre o projeto no papel e a obra entregue — do planejamento técnico à coordenação de equipes em campo.</p>
-        <p class="reveal" data-delay="140" data-i18n="aboutBody">Gosto de problemas que exigem os dois lados do cérebro: rigor técnico para desenhar a solução certa, e pragmatismo de execução para tirá-la do papel dentro do prazo, do orçamento e do padrão de qualidade esperado. Ao longo da carreira venho construindo essa ponte em projetos de diferentes portes — sempre com foco em resultado mensurável.</p>
+        <h2 data-i18n="aboutTitle">Engenharia é decisão.<br>Execução é disciplina.</h2>
+        <p class="lede" data-i18n="aboutLede">Sou engenheira e atuo na ponte entre o projeto no papel e a obra entregue — do planejamento técnico à coordenação de equipes em campo.</p>
+        <p data-i18n="aboutBody">Gosto de problemas que exigem os dois lados do raciocínio: rigor técnico para desenhar a solução certa, e pragmatismo de execução para tirá-la do papel dentro do prazo, do orçamento e do padrão de qualidade esperado.</p>
 
-        <ul class="skill-tags reveal" data-delay="180">
+        <ul class="skill-run">
           <li data-i18n="skill1">Planejamento &amp; Cronograma</li>
           <li data-i18n="skill2">Gestão de Obras</li>
           <li data-i18n="skill3">Gestão de Equipes</li>
@@ -119,130 +118,103 @@
           <li data-i18n="skill5">Controle de Qualidade</li>
           <li data-i18n="skill6">Orçamento &amp; Custos</li>
         </ul>
-
-        <div class="about-metrics reveal" data-delay="220">
-          <div class="metric">
-            <span class="stat-num" data-count="30">0</span><span class="stat-plus">+</span>
-            <p data-i18n="metric1">projetos entregues</p>
-          </div>
-          <div class="metric">
-            <span class="stat-num" data-count="98">0</span><span class="stat-plus">%</span>
-            <p data-i18n="metric2">no prazo e no orçamento</p>
-          </div>
-          <div class="metric">
-            <span class="stat-num" data-count="12">0</span>
-            <p data-i18n="metric3">equipes coordenadas</p>
-          </div>
-        </div>
       </div>
+    </div>
 
+    <div class="row">
+      <div class="spec-strip">
+        <div class="spec"><span class="spec-num" data-count="8">0</span><span class="spec-unit">anos</span><span class="spec-label" data-i18n="metric0">de experiência</span></div>
+        <div class="spec"><span class="spec-num" data-count="30">0</span><span class="spec-unit">+</span><span class="spec-label" data-i18n="metric1">projetos entregues</span></div>
+        <div class="spec"><span class="spec-num" data-count="98">0</span><span class="spec-unit">%</span><span class="spec-label" data-i18n="metric2">no prazo e no orçamento</span></div>
+        <div class="spec"><span class="spec-num" data-count="12">0</span><span class="spec-unit"></span><span class="spec-label" data-i18n="metric3">equipes coordenadas</span></div>
+      </div>
     </div>
   </section>
 
   <!-- ============ PROJECTS ============ -->
   <section class="projects" id="projetos">
-    <div class="container">
+    <div class="row">
       <div class="section-head">
-        <p class="section-kicker reveal" data-i18n="projectsKicker">Our Projects</p>
-        <h2 class="reveal" data-delay="60" data-i18n="projectsTitle">Ideias que viraram obra.</h2>
-        <p class="section-intro reveal" data-delay="100" data-i18n="projectsIntro">Uma seleção de projetos onde engenharia e execução andaram lado a lado, do conceito à entrega final.</p>
+        <h2 data-i18n="projectsTitle">Registro de projetos.</h2>
+        <p data-i18n="projectsIntro">Uma seleção de projetos onde engenharia e execução andaram lado a lado, do conceito à entrega final.</p>
       </div>
 
-      <div class="project-list">
-
-        <article class="project-card reveal" data-delay="0">
-          <div class="project-index">01</div>
-          <div class="project-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>
-          </div>
-          <div class="project-body">
-            <h3 data-i18n="project1Title">Expansão de Planta Industrial</h3>
-            <p data-i18n="project1Desc">Planejamento e coordenação da ampliação de uma linha produtiva, com redesenho de fluxo e redução de retrabalho.</p>
-            <ul class="project-tags">
-              <li data-i18n="project1Tag1">Planejamento</li>
-              <li data-i18n="project1Tag2">Processos</li>
-              <li data-i18n="project1Tag3">Infraestrutura</li>
-            </ul>
-          </div>
-          <a class="project-link" href="#" aria-label="Ver detalhes do projeto">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M7 17 17 7M9 7h8v8"/></svg>
-          </a>
-        </article>
-
-        <article class="project-card reveal" data-delay="80">
-          <div class="project-index">02</div>
-          <div class="project-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M4 20V10l8-6 8 6v10M9 20v-6h6v6"/><path d="M4 10l8 6 8-6"/></svg>
-          </div>
-          <div class="project-body">
-            <h3 data-i18n="project2Title">Gestão de Obra Corporativa</h3>
-            <p data-i18n="project2Desc">Coordenação de equipes multidisciplinares em obra comercial, com entrega antecipada e dentro do orçamento.</p>
-            <ul class="project-tags">
-              <li data-i18n="project2Tag1">Gestão de Obras</li>
-              <li data-i18n="project2Tag2">Equipes</li>
-              <li data-i18n="project2Tag3">Cronograma</li>
-            </ul>
-          </div>
-          <a class="project-link" href="#" aria-label="Ver detalhes do projeto">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M7 17 17 7M9 7h8v8"/></svg>
-          </a>
-        </article>
-
-        <article class="project-card reveal" data-delay="160">
-          <div class="project-index">03</div>
-          <div class="project-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M4 19h16M6 19V9M12 19V5M18 19v-7"/></svg>
-          </div>
-          <div class="project-body">
-            <h3 data-i18n="project3Title">Otimização de Processos</h3>
-            <p data-i18n="project3Desc">Mapeamento de gargalos operacionais e implementação de controle de qualidade que elevou a eficiência da equipe.</p>
-            <ul class="project-tags">
-              <li data-i18n="project3Tag1">Otimização</li>
-              <li data-i18n="project3Tag2">Qualidade</li>
-              <li data-i18n="project3Tag3">Dados</li>
-            </ul>
-          </div>
-          <a class="project-link" href="#" aria-label="Ver detalhes do projeto">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M7 17 17 7M9 7h8v8"/></svg>
-          </a>
-        </article>
-
-      </div>
+      <table class="schedule">
+        <thead>
+          <tr>
+            <th data-i18n="colNum">Nº</th>
+            <th data-i18n="colProject">Projeto</th>
+            <th class="col-scope" data-i18n="colScope">Escopo</th>
+            <th class="col-year" data-i18n="colYear">Ano</th>
+            <th class="col-go" aria-hidden="true"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="schedule-row" tabindex="0">
+            <td class="mono">01</td>
+            <td>
+              <span class="proj-title" data-i18n="project1Title">Expansão de Planta Industrial</span>
+              <p class="proj-desc" data-i18n="project1Desc">Planejamento e coordenação da ampliação de uma linha produtiva, com redesenho de fluxo e redução de retrabalho.</p>
+            </td>
+            <td class="col-scope" data-i18n="project1Tag1">Planejamento &amp; Infraestrutura</td>
+            <td class="col-year mono">2024</td>
+            <td class="col-go"><svg class="i"><use href="#i-arrow"/></svg></td>
+          </tr>
+          <tr class="schedule-row" tabindex="0">
+            <td class="mono">02</td>
+            <td>
+              <span class="proj-title" data-i18n="project2Title">Gestão de Obra Corporativa</span>
+              <p class="proj-desc" data-i18n="project2Desc">Coordenação de equipes multidisciplinares em obra comercial, com entrega antecipada e dentro do orçamento.</p>
+            </td>
+            <td class="col-scope" data-i18n="project2Tag1">Gestão de Obras &amp; Equipes</td>
+            <td class="col-year mono">2023</td>
+            <td class="col-go"><svg class="i"><use href="#i-arrow"/></svg></td>
+          </tr>
+          <tr class="schedule-row" tabindex="0">
+            <td class="mono">03</td>
+            <td>
+              <span class="proj-title" data-i18n="project3Title">Otimização de Processos</span>
+              <p class="proj-desc" data-i18n="project3Desc">Mapeamento de gargalos operacionais e implementação de controle de qualidade que elevou a eficiência da equipe.</p>
+            </td>
+            <td class="col-scope" data-i18n="project3Tag1">Processos &amp; Qualidade</td>
+            <td class="col-year mono">2022</td>
+            <td class="col-go"><svg class="i"><use href="#i-arrow"/></svg></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
-  <!-- ============ CONTACT ============ -->
+  <!-- ============ CONTACT — TITLE BLOCK ============ -->
   <section class="contact" id="contato">
-    <div class="container contact-grid">
-      <div class="contact-copy reveal">
-        <p class="section-kicker" data-i18n="contactKicker">Contato</p>
-        <h2 data-i18n="contactTitle">Vamos construir o próximo projeto?</h2>
-        <p class="section-intro" data-i18n="contactIntro">Aberta a conversas sobre novos projetos, consultoria ou oportunidades de longo prazo.</p>
-        <a href="mailto:seu@email.com" class="btn btn-primary btn-lg" id="contactEmailBtn">
-          <span data-i18n="contactCta">Enviar um e-mail</span>
-        </a>
-      </div>
+    <div class="row">
+      <h2 data-i18n="contactTitle">Vamos construir o próximo projeto?</h2>
+      <p class="lede" data-i18n="contactIntro">Aberta a conversas sobre novos projetos, consultoria ou oportunidades de longo prazo.</p>
 
-      <div class="contact-list reveal" data-delay="100">
-        <a class="contact-item" href="mailto:seu@email.com">
-          <span class="contact-label" data-i18n="contactEmailLabel">E-mail</span>
-          <span class="contact-value">seu@email.com</span>
-        </a>
-        <a class="contact-item" href="tel:+5511999999999">
-          <span class="contact-label" data-i18n="contactPhoneLabel">Telefone</span>
-          <span class="contact-value">+55 (11) 99999-9999</span>
-        </a>
-        <a class="contact-item" href="#" target="_blank" rel="noopener">
-          <span class="contact-label">LinkedIn</span>
-          <span class="contact-value">/in/seu-perfil</span>
-        </a>
-        <a class="contact-item" href="#" target="_blank" rel="noopener">
-          <span class="contact-label">GitHub</span>
-          <span class="contact-value">/seu-usuario</span>
-        </a>
-        <div class="contact-item contact-item--static">
-          <span class="contact-label" data-i18n="contactLocationLabel">Localização</span>
-          <span class="contact-value" data-i18n="contactLocationValue">Sua Cidade, Brasil</span>
+      <div class="title-block">
+        <div class="tb-cell tb-cell--wide">
+          <span class="tb-label" data-i18n="contactEmailLabel">E-mail</span>
+          <a class="tb-value" href="mailto:seu@email.com">seu@email.com</a>
+        </div>
+        <div class="tb-cell">
+          <span class="tb-label" data-i18n="contactPhoneLabel">Telefone</span>
+          <a class="tb-value" href="tel:+5511999999999">+55 11 99999-9999</a>
+        </div>
+        <div class="tb-cell">
+          <span class="tb-label">LinkedIn</span>
+          <a class="tb-value" href="#" target="_blank" rel="noopener">/in/seu-perfil</a>
+        </div>
+        <div class="tb-cell">
+          <span class="tb-label">GitHub</span>
+          <a class="tb-value" href="#" target="_blank" rel="noopener">/seu-usuario</a>
+        </div>
+        <div class="tb-cell">
+          <span class="tb-label" data-i18n="contactLocationLabel">Localização</span>
+          <span class="tb-value" data-i18n="contactLocationValue">Sua Cidade, Brasil</span>
+        </div>
+        <div class="tb-cell tb-cell--muted">
+          <span class="tb-label" data-i18n="contactDateLabel">Atualizado em</span>
+          <span class="tb-value mono" id="tbDate">2026</span>
         </div>
       </div>
     </div>
@@ -252,10 +224,10 @@
 
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <p data-i18n="footerNote">Feito com atenção ao detalhe.</p>
-    <button class="back-to-top" id="backToTop" type="button" aria-label="Voltar ao topo">
-      <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  <div class="row footer-inner">
+    <p class="mono" data-i18n="footerNote">FL.01 — feito com atenção ao detalhe.</p>
+    <button class="ctl ctl-icon" id="backToTop" type="button" aria-label="Voltar ao topo">
+      <svg class="i"><use href="#i-up"/></svg>
     </button>
   </div>
 </footer>
