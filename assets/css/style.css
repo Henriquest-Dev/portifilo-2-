@@ -200,14 +200,12 @@ html[data-lang="pt"] [data-lang-opt="pt"], html[data-lang="en"] [data-lang-opt="
   display: flex; justify-content: center;
 }
 .hero-portrait img{
-  width: min(100%, 420px);
+  width: min(100%, 440px);
   height: auto;
-  object-fit: cover;
-  aspect-ratio: 3/4;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
+  object-fit: contain;
+  filter: drop-shadow(0 24px 40px rgba(0,0,0,.28));
 }
+[data-theme="dark"] .hero-portrait img{ filter: drop-shadow(0 24px 40px rgba(0,0,0,.6)); }
 
 .hero-index{
   position: relative; z-index: 2;
