@@ -107,7 +107,7 @@
   function initTheme() {
     var stored = null;
     try { stored = localStorage.getItem("theme"); } catch (e) {}
-    root.setAttribute("data-theme", stored || "dark");
+    root.setAttribute("data-theme", stored || "light");
 
     document.getElementById("themeToggle").addEventListener("click", function () {
       var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
