@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfólio — Engenharia &amp; Execução</title>
+<title>Sheyd Luísa — Engenharia &amp; Execução</title>
 <meta name="description" content="Portfólio pessoal — da engenharia à execução, com energia e visão de futuro.">
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,500;1,600&family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -16,15 +16,14 @@
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
     <a href="#top" class="logo" aria-label="Início">
-      <span class="logo-mark" aria-hidden="true"></span>
-      <span class="logo-text" data-i18n="brandName">Portfólio</span>
+      <span class="logo-text" data-i18n="brandName">Sheyd Luísa<span class="logo-dot">.</span></span>
     </a>
 
-    <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
-      <a href="#sobre" data-i18n="navAbout">Sobre</a>
-      <a href="#projetos" data-i18n="navProjects">Projetos</a>
-      <a href="#contato" data-i18n="navContact">Contato</a>
-    </nav>
+    <button class="mode-pill" id="themeToggle" type="button" aria-label="Alternar tema claro/escuro">
+      <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.4 4.4l1.7 1.7M17.9 17.9l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.4 19.6l1.7-1.7M17.9 6.1l1.7-1.7"/></svg>
+      <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 14.6A8.7 8.7 0 1 1 9.4 3.5a7 7 0 0 0 11.1 11.1Z"/></svg>
+      <span data-i18n="modeToggle">mudar o modo</span>
+    </button>
 
     <div class="header-controls">
       <button class="lang-toggle" id="langToggle" type="button" aria-label="Alternar idioma">
@@ -32,17 +31,6 @@
         <span class="lang-sep">/</span>
         <span class="lang-opt" data-lang-opt="en">EN</span>
       </button>
-
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema claro/escuro">
-        <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.4 4.4l1.7 1.7M17.9 17.9l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.4 19.6l1.7-1.7M17.9 6.1l1.7-1.7"/></svg>
-        <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 14.6A8.7 8.7 0 1 1 9.4 3.5a7 7 0 0 0 11.1 11.1Z"/></svg>
-      </button>
-
-      <a href="#contato" class="btn btn-pill header-cta">
-        <span data-i18n="heroCtaContact">Fale comigo</span>
-        <span class="pill-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
-      </a>
-
       <button class="nav-burger" id="navBurger" type="button" aria-label="Abrir menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -51,6 +39,7 @@
 
   <nav class="mobile-nav" id="mainNavMobile" aria-label="Navegação móvel">
     <a href="#sobre" data-i18n="navAbout">Sobre</a>
+    <a href="#servicos" data-i18n="navServices">Serviços</a>
     <a href="#projetos" data-i18n="navProjects">Projetos</a>
     <a href="#contato" data-i18n="navContact">Contato</a>
   </nav>
@@ -59,43 +48,60 @@
 <main id="top">
 
   <!-- ============ HERO ============ -->
-  <section class="hero-wrap">
-    <div class="container">
-      <div class="hero-card">
+  <section class="hero">
+    <span class="deco deco-star deco-1" aria-hidden="true">✦</span>
+    <span class="deco deco-circle deco-2" aria-hidden="true"></span>
+    <span class="deco deco-star deco-3" aria-hidden="true">✦</span>
 
-        <p class="hero-label" data-i18n="heroLabel">Olá, eu sou a Sheyd Luísa</p>
-        <h1 class="hero-title" data-i18n-html="heroHeadline">Energia com visão<br>de futuro.</h1>
+    <div class="container hero-intro">
+      <p class="serif-line">
+        <span data-i18n="heroIntro1">Olá, eu sou a</span> <span class="serif-strong" data-i18n="heroName">Sheyd Luísa</span>
+      </p>
+    </div>
 
-        <div class="hero-aside">
-          <p class="hero-aside-lead" data-i18n="heroAsideLead">Engenharia deveria ser invisível.</p>
-          <p class="hero-aside-sub" data-i18n="heroSub">Planejo, construo e entrego sistemas e processos que funcionam no mundo real — não só no papel.</p>
-        </div>
+    <div class="hero-stage">
+      <h1 class="hero-role" data-i18n="heroRole">ENGENHEIRA</h1>
+      <figure class="hero-photo">
+        <img src="assets/img/portrait-hero-cutout.png" alt="Sheyd Luísa, engenheira, sorrindo" loading="eager">
+      </figure>
+    </div>
 
-        <figure class="hero-portrait">
-          <img src="assets/img/portrait-hero-cutout.png" alt="Retrato profissional, vestindo terno azul-marinho" loading="eager">
-        </figure>
-
-        <ul class="hero-index">
-          <li><span class="hi-num">#01</span><span data-i18n="skill1">Planejamento &amp; Cronograma</span></li>
-          <li><span class="hi-num">#02</span><span data-i18n="skill2">Gestão de Obras</span></li>
-          <li><span class="hi-num">#03</span><span data-i18n="skill4">Otimização de Processos</span></li>
-          <li><span class="hi-num">#04</span><span data-i18n="skill5">Controle de Qualidade</span></li>
-        </ul>
-      </div>
+    <div class="container hero-bottom">
+      <p class="hero-spec" data-i18n-html="heroSpec">Especialista em<br>planejamento, obras<br>e gestão de processos.</p>
+      <a href="#contato" class="btn-pill btn-pill--accent">
+        <span data-i18n="heroCta">Vamos conversar</span>
+        <span class="pill-dot">🙂</span>
+      </a>
+      <p class="hero-desc" data-i18n="heroDesc">Construo pontes entre o projeto técnico e a obra entregue — com energia, bom humor e atenção a cada detalhe.</p>
     </div>
   </section>
 
-  <!-- ============ TOOLS STRIP ============ -->
-  <section class="tools-strip">
-    <div class="container tools-inner">
-      <p class="tools-label" data-i18n="toolsLabel">Ferramentas &amp; métodos do dia a dia</p>
-      <ul class="tools-list">
-        <li>AutoCAD</li>
-        <li>MS Project</li>
-        <li>Primavera P6</li>
-        <li>Lean / Six Sigma</li>
-        <li>Power BI</li>
-      </ul>
+  <!-- ============ SERVICES / BLUE ============ -->
+  <section class="services" id="servicos">
+    <div class="container services-head">
+      <div>
+        <h2 class="services-title">
+          <span class="bold-line" data-i18n="servicesTitle1">SOLUÇÕES PARA</span>
+          <span class="serif-line-lg" data-i18n="servicesTitle2">qualquer obra.</span>
+        </h2>
+      </div>
+      <div class="services-aside">
+        <p data-i18n="servicesIntro">Planejamento, execução e gestão — tudo com o mesmo padrão de qualidade e muita disposição.</p>
+        <a href="#contato" class="btn-pill btn-pill--light">
+          <span data-i18n="servicesCta">Agendar conversa</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="tag-cloud">
+      <span class="tag" data-i18n="skill1">Planejamento &amp; Cronograma</span>
+      <span class="tag" data-i18n="skill2">Gestão de Obras</span>
+      <span class="tag" data-i18n="skill3">Gestão de Equipes</span>
+      <span class="tag" data-i18n="skill4">Otimização de Processos</span>
+      <span class="tag" data-i18n="skill5">Controle de Qualidade</span>
+      <span class="tag" data-i18n="skill6">Orçamento &amp; Custos</span>
+      <span class="tag" data-i18n="skillInfra">Infraestrutura</span>
+      <span class="tag" data-i18n="skillQuality">Qualidade</span>
     </div>
   </section>
 
@@ -109,18 +115,18 @@
       <div class="about-copy">
         <p class="about-lede" data-i18n="aboutLede">Sou engenheira e atuo na ponte entre o projeto no papel e a obra entregue — do planejamento técnico à coordenação de equipes em campo.</p>
         <p data-i18n="aboutBody">Gosto de problemas que exigem os dois lados do raciocínio: rigor técnico para desenhar a solução certa, e pragmatismo de execução para tirá-la do papel dentro do prazo, do orçamento e do padrão de qualidade esperado.</p>
-        <a href="#contato" class="btn btn-pill">
-          <span data-i18n="heroCtaContact">Fale comigo</span>
-          <span class="pill-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        <a href="#contato" class="btn-pill btn-pill--accent">
+          <span data-i18n="heroCta">Vamos conversar</span>
+          <span class="pill-dot">🙂</span>
         </a>
       </div>
     </div>
 
     <div class="container">
       <div class="photo-grid">
-        <figure><img src="assets/img/portrait-about.jpg" alt="Retrato em ângulo, sorriso confiante" loading="lazy"></figure>
-        <figure><img src="assets/img/portrait-face.jpg" alt="Retrato em close" loading="lazy"></figure>
-        <figure><img src="assets/img/portrait-detail.jpg" alt="Detalhe das mãos e do terno" loading="lazy" style="object-position: top;"></figure>
+        <figure class="tilt-a"><img src="assets/img/portrait-about.jpg" alt="Retrato em ângulo, sorriso confiante" loading="lazy"></figure>
+        <figure class="tilt-b"><img src="assets/img/portrait-face.jpg" alt="Retrato em close, sorrindo" loading="lazy"></figure>
+        <figure class="tilt-a"><img src="assets/img/portrait-detail.jpg" alt="Detalhe das mãos e do terno" loading="lazy" style="object-position: top;"></figure>
       </div>
     </div>
 
@@ -139,7 +145,10 @@
     <div class="container">
       <div class="section-head">
         <p class="kicker" data-i18n="projectsKicker">Projetos</p>
-        <h2 data-i18n="projectsTitle">Ideias que viraram obra.</h2>
+        <h2>
+          <span class="bold-line bold-line--ink" data-i18n="projectsTitle1">PROJETOS</span>
+          <span class="serif-line-lg serif-line-lg--ink" data-i18n="projectsTitle2">em destaque.</span>
+        </h2>
         <p class="section-intro" data-i18n="projectsIntro">Uma seleção de projetos onde engenharia e execução andaram lado a lado, do conceito à entrega final.</p>
       </div>
 
@@ -179,14 +188,18 @@
 
   <!-- ============ CONTACT ============ -->
   <section class="contact" id="contato">
+    <span class="deco deco-star deco-4" aria-hidden="true">✦</span>
     <div class="container contact-inner">
       <p class="kicker" data-i18n="contactKicker">Contato</p>
-      <h2 data-i18n-html="contactTitle">Vamos construir o<br>próximo projeto?</h2>
+      <h2 class="contact-title">
+        <span class="bold-line" data-i18n="contactTitle1">VAMOS</span>
+        <span class="serif-line-lg" data-i18n="contactTitle2">construir juntas?</span>
+      </h2>
       <p class="section-intro" data-i18n="contactIntro">Aberta a conversas sobre novos projetos, consultoria ou oportunidades de longo prazo.</p>
 
-      <a href="mailto:seu@email.com" class="btn btn-pill btn-lg">
+      <a href="mailto:seu@email.com" class="btn-pill btn-pill--accent btn-lg">
         <span data-i18n="contactCta">Enviar um e-mail</span>
-        <span class="pill-arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        <span class="pill-dot">🙂</span>
       </a>
 
       <div class="contact-list">
@@ -210,7 +223,7 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p data-i18n="footerNote">Feito com atenção ao detalhe.</p>
+    <p data-i18n="footerNote">Feito com atenção ao detalhe (e um sorriso).</p>
     <button class="back-to-top" id="backToTop" type="button" aria-label="Voltar ao topo">
       <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
     </button>
