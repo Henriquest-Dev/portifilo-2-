@@ -243,6 +243,45 @@
     });
   }
 
+  /* ------------------------------------------------------------------ */
+  /* "Vamos conversar" chat-loader transition                            */
+  /* ------------------------------------------------------------------ */
+  function initChatLoader() {
+    var loader = document.getElementById("chatLoader");
+    var target = document.getElementById("contato");
+    if (!loader || !target) return;
+
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var playing = false;
+
+    document.querySelectorAll('a[href="#contato"]').forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        if (reduceMotion) return;
+        e.preventDefault();
+        if (playing) return;
+        playing = true;
+
+        loader.classList.add("is-active");
+        window.requestAnimationFrame(function () {
+          loader.classList.add("is-filling");
+        });
+
+        setTimeout(function () {
+          loader.classList.add("is-smiling");
+        }, 680);
+
+        setTimeout(function () {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 1200);
+
+        setTimeout(function () {
+          loader.classList.remove("is-active", "is-filling", "is-smiling");
+          playing = false;
+        }, 1750);
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initTheme();
     initLang();
@@ -250,5 +289,6 @@
     initHeaderScroll();
     initCounters();
     initBackToTop();
+    initChatLoader();
   });
 })();

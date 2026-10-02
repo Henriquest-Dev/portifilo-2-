@@ -348,6 +348,43 @@ h2{ font-family: var(--ff-black); font-size: clamp(1.9rem, 3.6vw, 2.9rem); lette
 .back-to-top svg{ width: 16px; height: 16px; }
 
 /* ==========================================================================
+   Chat loader (hero/CTA click transition)
+   ========================================================================== */
+.chat-loader{
+  position: fixed; left: 50%; top: 45%; z-index: 1000;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+  transform: translate(-50%, -50%) scale(.92);
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .3s var(--ease), transform .3s var(--ease), visibility .3s;
+}
+.chat-loader.is-active{ opacity: 1; visibility: visible; transform: translate(-50%, -50%) scale(1); }
+
+.chat-loader-track{
+  display: block; width: 180px; height: 7px; border-radius: 999px;
+  background: var(--surface-2); box-shadow: var(--shadow); overflow: hidden;
+  transition: opacity .25s ease, transform .25s ease;
+}
+.chat-loader-fill{
+  display: block; height: 100%; width: 0%; border-radius: inherit;
+  background: var(--accent);
+  transition: width .65s cubic-bezier(.3,.8,.2,1);
+}
+.chat-loader.is-filling .chat-loader-fill{ width: 100%; }
+.chat-loader.is-smiling .chat-loader-track{ opacity: 0; transform: scale(.6); }
+
+.chat-loader-face{
+  position: absolute;
+  width: 58px; height: 58px; border-radius: 50%;
+  background: var(--accent); color: var(--accent-ink);
+  display: grid; place-items: center;
+  box-shadow: var(--shadow);
+  transform: scale(0) rotate(-20deg);
+  opacity: 0;
+  transition: transform .5s cubic-bezier(.34,1.56,.64,1), opacity .3s ease;
+}
+.chat-loader.is-smiling .chat-loader-face{ transform: scale(1) rotate(0deg); opacity: 1; }
+
+/* ==========================================================================
    Responsive
    ========================================================================== */
 @media (max-width: 980px){
