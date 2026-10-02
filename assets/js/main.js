@@ -168,26 +168,6 @@
   }
 
   /* ------------------------------------------------------------------ */
-  /* Scroll reveal                                                      */
-  /* ------------------------------------------------------------------ */
-  function initReveal() {
-    var items = document.querySelectorAll(".reveal");
-    if (!("IntersectionObserver" in window)) {
-      items.forEach(function (el) { el.classList.add("is-visible"); });
-      return;
-    }
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
-    items.forEach(function (el) { observer.observe(el); });
-  }
-
-  /* ------------------------------------------------------------------ */
   /* Header hide-on-scroll                                               */
   /* ------------------------------------------------------------------ */
   function initHeaderScroll() {
@@ -227,13 +207,7 @@
       window.requestAnimationFrame(step);
     }
 
-    if (!("IntersectionObserver" in window)) { counters.forEach(animate); return; }
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) { animate(entry.target); observer.unobserve(entry.target); }
-      });
-    }, { threshold: 0.5 });
-    counters.forEach(function (el) { observer.observe(el); });
+    counters.forEach(animate);
   }
 
   /* ------------------------------------------------------------------ */
@@ -249,7 +223,6 @@
     initTheme();
     initLang();
     initMobileNav();
-    initReveal();
     initHeaderScroll();
     initCounters();
     initBackToTop();

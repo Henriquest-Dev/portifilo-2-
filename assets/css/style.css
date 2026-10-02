@@ -77,8 +77,6 @@ svg{ fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round;
   *{ animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
 
-.reveal{ opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
-.reveal.is-visible{ opacity: 1; transform: translateY(0); }
 
 /* ==========================================================================
    Buttons
@@ -174,7 +172,7 @@ html[data-lang="pt"] [data-lang-opt="pt"], html[data-lang="en"] [data-lang-opt="
 /* ==========================================================================
    Hero
    ========================================================================== */
-.hero-wrap{ padding-top: 150px; padding-bottom: 20px; }
+.hero-wrap{ padding-top: 150px; padding-bottom: 60px; }
 
 .hero-card{
   position: relative;
