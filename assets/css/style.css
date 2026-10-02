@@ -307,10 +307,10 @@ h2{ font-family: var(--ff-black); font-size: clamp(1.9rem, 3.6vw, 2.9rem); lette
 .project-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .project-card{
   padding: 30px 26px; border-radius: var(--radius-lg);
-  background: var(--bg);
-  transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+  background: transparent;
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease), background-color .4s var(--ease);
 }
-.project-card:hover{ transform: translateY(-8px) rotate(-1deg); box-shadow: var(--shadow); }
+.project-card:hover{ transform: translateY(-8px) rotate(-1deg); background: var(--bg); box-shadow: var(--shadow); }
 .project-num{ font-family: var(--ff-black); font-size: .82rem; color: var(--accent); }
 .project-card h3{ font-family: var(--ff-black); font-size: 1.15rem; margin-top: 14px; letter-spacing: -0.005em; }
 .project-card p{ margin-top: 12px; color: var(--text-muted); font-size: .9rem; }
@@ -330,11 +330,11 @@ h2{ font-family: var(--ff-black); font-size: clamp(1.9rem, 3.6vw, 2.9rem); lette
   display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
 }
 .contact-item{
-  background: var(--surface); padding: 20px 22px; border-radius: var(--radius-md);
+  background: transparent; padding: 20px 22px; border-radius: var(--radius-md);
   display: flex; flex-direction: column; gap: 6px; text-align: left;
-  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease), background-color .3s var(--ease);
 }
-.contact-item:hover{ transform: translateY(-3px); box-shadow: var(--shadow); }
+.contact-item:hover{ transform: translateY(-3px); background: var(--surface); box-shadow: var(--shadow); }
 .contact-item span:first-child{ font-size: .76rem; color: var(--text-soft); }
 .contact-item span:last-child{ font-weight: 600; }
 
